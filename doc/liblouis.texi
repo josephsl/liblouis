@@ -53,7 +53,7 @@ Copyright @copyright{} 2007,2009 Abilitiessoft, Inc.
 @uref{www.abilitiessoft.org}.
 
 @noindent
-Copyright @copyright{} 2014 Swiss Library for the Blind, Visually Impaired and Print Disabled.
+Copyright @copyright{} 2014-2015 Swiss Library for the Blind, Visually Impaired and Print Disabled.
 
 @vskip 10pt
 
@@ -80,6 +80,8 @@ Fifth Floor, Boston, MA 02110-1301, USA.
 
 @subtitle for version @value{VERSION}, @value{UPDATED}
 @author by John J. Boyer
+
+@c Update authors and add contributors.
 
 @c The following two commands start the copyright page.
 @page
@@ -193,6 +195,19 @@ braille translator library in their own programs. This manual is
 probably not for people who are looking for some turn-key braille
 translation software.
 
+@section Features overview
+
+LibLouis includes following features:
+
+@c Turn this list into proper Texi list.
+Includes forward braille translation tables for more than 50 languages.
+Includes back translation tables for more than dozen languages.
+Easy to follow braille table format.
+Various braille input and output opcodes to
+handle variety of braille translation rules.
+Comprehensive braille translation testing facility.
+C and Python bindings.
+
 @section How to read this manual
 
 If you are mostly interested in writing braille translation tables
@@ -209,6 +224,10 @@ itself then you will want to look at @ref{Programming with liblouis}.
 
 @node How to Write Translation Tables
 @chapter How to Write Translation Tables
+
+To display and enter braille via LibLouis, you need to
+define a braille translation table. This is a text file that specifies rules to be applied when translating
+sequence of characters to braille or vice versa.
 
 For many languages there is already a translation table, so before
 creating a new table start by looking at existing tables to modify
@@ -428,6 +447,8 @@ of a table list. The liblouis hyphenation algorithm was adopted from the
 one used by OpenOffice. Note that Hyphenation tables must follow
 character definitions and should preferably be the last. For an example
 of a hyphenation table, see @file{hyph_en_US.dic}.
+
+@c Please tell us what that table format looks like.
 
 @node Character-Definition Opcodes
 @section Character-Definition Opcodes
